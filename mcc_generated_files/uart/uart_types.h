@@ -1,15 +1,14 @@
 /**
- * CLOCK Generated Driver Source File
+ * UART Generated Driver Interface Header File
  * 
- * @file clock.c
+ * @file uart_types.h
  * 
- * @ingroup clockdriver 
+ * @defgroup uart_types UART_TYPES
  * 
- * @brief This is the generated driver implementation file for the CLOCK.
+ * @brief This file contains APIs for UART module.
  *
- * @version Driver Version 2.0.2
+ * @version UART Driver Version 3.0.0
 */
-
 /*
 © [2022] Microchip Technology Inc. and its subsidiaries.
 
@@ -31,25 +30,52 @@
     THIS SOFTWARE.
 */
 
-#include <xc.h>
-#include "../clock.h"
+#ifndef UART_TYPES_H
+#define	UART_TYPES_H
 
-void CLOCK_Initialize(void)
-{
-    // Set the CLOCK CONTROL module to the options selected in the user interface.
-    // NDIV 4; NOSC HFINTOSC; 
-    OSCCON1 = 0x62;
-    // SOSCPWR Low power; CSWHOLD may proceed; 
-    OSCCON3 = 0x0;
-    // EXTOEN disabled; HFOEN enabled; MFOEN disabled; LFOEN disabled; SOSCEN disabled; ADOEN disabled; 
-    OSCEN = 0x40;
-    // HFFRQ 4_MHz; 
-    OSCFRQ = 0x2;
-    // TUN undefined; 
-    OSCTUNE = 0x0;
-    // ACTEN disabled; ACTUD enabled; 
-    ACTCON = 0x0;
-}
 /**
- End of File
+  Section: Included Files
 */
+#include <stdbool.h>
+#include <stdint.h>
+
+#ifdef	__cplusplus
+extern "C" {
+#endif
+
+   
+/**
+  Section: Data Type Definitions
+*/ 
+      
+/**
+@ingroup uartdriver
+@enum UART_STANDARD_BAUDS
+@brief This Enum can be used to set UART standard
+baud-rates using \ref UARTx_BRGSet function e.g. \ref UART1_BRGSet.
+*/
+enum UART_STANDARD_BAUDS{
+UART_110 = 0,
+UART_300 = 1,
+UART_600 = 2,
+UART_1200 = 3,
+UART_2400 = 4,
+UART_4800 = 5,
+UART_9600 = 6,
+UART_14400 = 7,
+UART_19200 = 8,
+UART_38400 = 9,
+UART_57600 = 10,
+UART_115200 = 11,
+UART_230400 = 12,
+UART_460800 = 13,
+UART_921600 = 14,
+};
+
+
+#ifdef	__cplusplus
+}
+#endif
+
+#endif	/* UART_TYPES_H */
+

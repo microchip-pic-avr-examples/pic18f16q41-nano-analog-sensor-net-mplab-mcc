@@ -8,7 +8,7 @@
  * @brief This is generated driver implementation for pins. 
  *        This file provides implementations for pin APIs for all pins selected in the GUI.
  *
- * @version Driver Version 3.0.0
+ * @version Driver Version 3.1.0
 */
 
 /*
@@ -48,14 +48,14 @@ void PIN_MANAGER_Initialize(void)
     TRISx registers
     */
     TRISA = 0x3F;
-    TRISB = 0x70;
+    TRISB = 0xF0;
     TRISC = 0x7D;
 
     /**
     ANSELx registers
     */
     ANSELA = 0x37;
-    ANSELB = 0xF0;
+    ANSELB = 0xD0;
     ANSELC = 0x7C;
 
     /**
@@ -94,8 +94,8 @@ void PIN_MANAGER_Initialize(void)
     /**
     PPS registers
     */
+    U1RXPPS = 0xD; //RB5->UART1:RX1;
     T4INPPS = 0x10; //RC0->TMR4:T4IN;
-    RB7PPS = 0x10;  //RB7->UART1:TX1;
     RC1PPS = 0x01;  //RC1->CLC1:CLC1;
 
    /**
