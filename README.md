@@ -49,29 +49,31 @@ __Important Note:__ Each sensor requires a differing interface to function so un
 <!-- Explain how to connect hardware and set up software. Depending on complexity, step-by-step instructions and/or tables and/or images can be used -->
 # Peripheral Setup Using MCC:
 Project Peripherals:
+[![MCHP](images/project_resources.png)]
+Clock Control:
+[![MCHP](images/clock_control.png)]
+Configuration Bits:
+[![MCHP](images/config_bits.png)]
+ADCC Configuration:
+[![MCHP](images/adcc.png)]
+CLC Configuration:
+[![MCHP](images/clc_config.png)]
+[![MCHP](images/clc.png)]
+OPAMP Configuration:
+[![MCHP](images/opamp.png)]
+TMR4 Configuration:
+[![MCHP](images/tmr4.png)]
+UART Configuration:ADD BOXES!!!
+[![MCHP](images/uart.png)]
+[![MCHP](images/uart_plib.png)]
+Builder:
+[![MCHP](images/builder.png)]
+Pin Grid View:ADD BOXES!!!
 
-Clock Control:!!!
-
-Configuration Bits:!!!
-
-ADCC Configuration:!!!
-
-CLC Configuration:!!!
-
-OPAMP Configuration:!!!
-
-TMR4 Configuration:!!!
-
-UART Configuration:!!!
-
-Builder:!!!
-
-Pin Grid View:!!!
-
-Pins: !!!
+Pins:ADD BOXES!!!
 
 Demo Configuration:
-!!!
+[![MCHP](images/hardware_config.png)]
 This demo uses the curiosity nano base board, a Mikroe SHT AN, Pressure 13, and Air Quality click along with the Curiosity Nano PIC18F16Q41 microcontroller.  Populated on mikro BUS socket #1, #2 and #3 are the SHT click board, Air Quality Click, and the Pressure 13 Click respectively.
 The Operational Amplifier (OPA) module was used for the analog output of the Air Quality and SHT AN click by connecting them to non-inverting OPAMP pins (OPA1IN+). The Pressure 13 was connected directly to analog input pin RC2 for the ADCC. Additionally, pin RC7 is used as a GPIO output pin to control the chip select line of the SHT AN click, switching between temperature and humidity readings. 
 
@@ -80,13 +82,15 @@ This code example’s signal connections are summarized in the following table:
 Note: If different sockets are being used for different clicks boards, be sure to change the respective pins.
 
 __Important Note:__ The base must be modified to support running the microcontroller at 5v. The board uses the internal charge pumps that supply both 3.3V and 5V to the mikro Bus sockets. However, the curiosity baseboard will pull the “Voff” pin LOW by default and disable the Curiosity Nano’s power supply and use the base board’s 3.3V power supply instead. For this demo to function properly at 5 volts the user MUST remove the “Voff” and “3v3” jumper resistors from the base.
-!!!
+[![MCHP](images/removed_voff_jumper_box.png)]
+[![MCHP](images/removed_3v3_jumper_box.png)]
+
 
 ## Operation
 
 <!-- Explain how to operate the example. Depending on complexity, step-by-step instructions and/or tables and/or images can be used -->
 UART is used to display the net’s output to MPLAB Data Visualizer with a baud rate of 9600. And the pushbutton on the curiosity is used to switch between sensors. The resulting messages are shown on the terminal window below:  
-!!!
+[![MCHP](images/output.png)]
 
 ## Summary
 
