@@ -1,6 +1,6 @@
 <!-- Please do not change this logo with link -->
 
-[![MCHP](images/microchip.png)](https://www.microchip.com)
+[<img src="images/microchip.png)](https://www.microchip.com)
 
 # Analog Sensor Net for PIC18F16Q41 Curiousity Nano
 
@@ -52,7 +52,7 @@ __Important Note:__ Each sensor requires a differing interface to function so un
 This demo uses the curiosity nano base board, a Mikroe SHT AN, Pressure 13, and Air Quality click along with the Curiosity Nano PIC18F16Q41 microcontroller.  Populated on mikro BUS socket #1, #2 and #3 are the SHT click board, Air Quality Click, and the Pressure 13 Click respectively.
 The Operational Amplifier (OPA) module was used for the analog output of the Air Quality and SHT AN click by connecting them to non-inverting OPAMP pins (OPA1IN+). The Pressure 13 was connected directly to analog input pin RC2 for the ADCC. Additionally, pin RC7 is used as a GPIO output pin to control the chip select line of the SHT AN click, switching between temperature and humidity readings. 
 
-![MCHP](images/hardware_config.png | width="750")
+<img src="images/hardware_config.png" alt="MCHP" width="500"/></a>
 
 This code example’s signal connections are summarized in the following table:
 
@@ -70,51 +70,51 @@ Note: If different sockets are being used for different clicks boards, be sure t
 __Important Note:__ The base must be modified to support running the microcontroller at 5v. The board uses the internal charge pumps that supply both 3.3V and 5V to the mikro Bus sockets. However, the curiosity baseboard will pull the “Voff” pin LOW by default and disable the Curiosity Nano’s power supply and use the base board’s 3.3V power supply instead. For this demo to function properly at 5 volts the user MUST remove the “Voff” and “3v3” jumper resistors from the base.
 
 
-![MCHP](images/removed_voff_jumper_box.png | width="750")
-![MCHP](images/removed_3v3_jumper_box.png | width="750")
+<img src="images/removed_voff_jumper_box.png" alt="MCHP" width="500"/></a>
+<img src="images/removed_3v3_jumper_box.png" alt="MCHP" width="500"/></a>
 
 ### Peripheral Setup Using MCC:
 #### Project Peripherals:
-![MCHP](images/project_resources.png | width="750")
+<img src="images/project_resources.png" alt="MCHP" width="500"/></a>
 
 #### Clock Control:
-![MCHP](images/clock_control.png | width="750")
+<img src="images/clock_control.png" alt="MCHP" width="500"/></a>
 
 #### Configuration Bits:
-![MCHP](images/config_bits.png | width="750")
+<img src="images/config_bits.png" alt="MCHP" width="500"/></a>
 
 #### ADCC Configuration:
-![MCHP](images/adcc.png | width="750")
+<img src="images/adcc.png" alt="MCHP" width="500"/></a>
 
 #### CLC Configuration:
-![MCHP](images/clc_config.png | width="750")
+<img src="images/clc_config.png" alt="MCHP" width="500"/></a>
 
-![MCHP](images/clc.png | width="750")
+<img src="images/clc.png" alt="MCHP" width="500"/></a>
 
 #### OPAMP Configuration:
-![MCHP](images/opamp.png | width="750")
+<img src="images/opamp.png" alt="MCHP" width="500"/></a>
 
 #### TMR4 Configuration:
-![MCHP](images/tmr4.png | width="750")
+<img src="images/tmr4.png" alt="MCHP" width="500"/></a>
 
 #### UART Configuration:
-![MCHP](images/uart.png | width="750")
+<img src="images/uart.png" alt="MCHP" width="500"/></a>
 
-![MCHP](images/uart_plib.png | width="750")
+<img src="images/uart_plib.png" alt="MCHP" width="500"/></a>
 
 #### Builder:
-![MCHP](images/builder.png | width="750")
+<img src="images/builder.png" alt="MCHP" width="500"/></a>
 #### Pin Grid View:
-![MCHP](images/pin_grid_view.png | width="750")
+<img src="images/pin_grid_view.png" alt="MCHP" width="500"/></a>
 
 #### Pins:
-![MCHP](images/pins.png | width="750")
+<img src="images/pins.png" alt="MCHP" width="500"/></a>
 
 ## Operation
 
 <!-- Explain how to operate the example. Depending on complexity, step-by-step instructions and/or tables and/or images can be used -->
 UART is used to display the net’s output to MPLAB Data Visualizer with a baud rate of 9600. And the pushbutton on the curiosity is used to switch between sensors. The resulting messages are shown on the terminal window below:  
-![MCHP](images/output.png | width="750")
+<img src="images/output.png" alt="MCHP" width="500"/></a>
 
 <!-- ## Summary
 
