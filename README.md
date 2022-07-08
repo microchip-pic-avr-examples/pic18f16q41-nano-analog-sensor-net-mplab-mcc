@@ -70,12 +70,12 @@ Note: If different sockets are being used for different clicks boards, be sure t
 __Important Note:__ The base must be modified to support running the microcontroller at 5v. The board uses the internal charge pumps that supply both 3.3V and 5V to the mikro Bus sockets. However, the curiosity baseboard will pull the “Voff” pin LOW by default and disable the Curiosity Nano’s power supply and use the base board’s 3.3V power supply instead. For this demo to function properly at 5 volts the user MUST remove the “Voff” and “3v3” jumper resistors from the base.
 
 
-<img src="images/removed_voff_jumper_box.png" alt="MCHP" width="500"/></a>
-<img src="images/removed_3v3_jumper_box.png" alt="MCHP" width="500"/></a>
+<img src="images/removed_voff_jumper_box.png" alt="MCHP" height="300"/></a>
+<img src="images/removed_3v3_jumper_box.png" alt="MCHP" height="300"/></a>
 
 ### Peripheral Setup Using MCC:
 #### Project Peripherals:
-<img src="images/project_resources.png" alt="MCHP" width="500"/></a>
+<img src="images/project_resources.png" alt="MCHP" width="300"/></a>
 
 #### Clock Control:
 <img src="images/clock_control.png" alt="MCHP" width="500"/></a>
@@ -114,7 +114,7 @@ __Important Note:__ The base must be modified to support running the microcontro
 
 <!-- Explain how to operate the example. Depending on complexity, step-by-step instructions and/or tables and/or images can be used -->
 UART is used to display the net’s output to MPLAB Data Visualizer with a baud rate of 9600. And the pushbutton on the curiosity is used to switch between sensors. The resulting messages are shown on the terminal window below:  
-<img src="images/output.png" alt="MCHP" width="500"/></a>
+<img src="images/output.png" alt="MCHP" height="300"/></a>
 
 <!-- ## Summary
 
