@@ -79,35 +79,46 @@ __Important Note:__ The base must be modified to support running the microcontro
 
 #### Clock Control:
 <img src="images/clock_control.png" alt="MCHP" width="500"/></a>
+
 Enable the High Frequency Internal Oscillator inside of "Clock Control".
 #### Configuration Bits:
 <img src="images/config_bits.png" alt="MCHP" width="500"/></a>
+
 Make sure the "Esternal Oscillator Mode Selection" is set to "Oscillator not enabled"  and that "HFINTOSC with HFFRQ = 4MHz and CDIV = 4:1" is set for "Power-up Default Value for COSC".
 #### ADCC Configuration:
 <img src="images/adcc.png" alt="MCHP" width="500"/></a>
+
 The ADCC should be configured to Burst Average Mode with Continuous Operation to reduce noise on incoming signals. This configured ADCC setting will function as a default setting for the ADCC as the application code adjusts ADCC settings during operation.
 #### OPAMP Configuration:
 <img src="images/opamp.png" alt="MCHP" width="500"/></a>
+
 The OPAMP is initialized in "Unity Gain Buffer" mode initially as a default setting. Similarly to the ADCC, the application will alter OPAMP settings as needed during operation.
 #### CLC Configuration:
 <img src="images/clc_config.png" alt="MCHP" width="500"/></a>
-The CLC is used with TMR4 to create a hardware debouncer for the Curiosity Nano's Switch 0, which is used to switch between sensors.
+
 <img src="images/clc.png" alt="MCHP" width="500"/></a>
+
+The CLC is used with TMR4 to create a hardware debouncer for the Curiosity Nano's Switch 0, which is used to switch between sensors.
 #### TMR4 Configuration:
 <img src="images/tmr4.png" alt="MCHP" width="500"/></a>
+
 TMR4 is running in a Monostable mode as a timer for the CLC's JK flip-flop to create a hardware debouncer for Switch 0.
 #### UART Configuration:
 <img src="images/uart.png" alt="MCHP" width="500"/></a>
 
 <img src="images/uart_plib.png" alt="MCHP" width="500"/></a>
+
 The UART driver is used to display the output from the sensor net in MPLAB® Data Visualizer or any terminal emulator. To enable print statements, the user must open the UART peripheral library (UART1PLIB) from the Builder window and enable "Redirect STDIO to UART".
 #### Builder:
 <img src="images/builder.png" alt="MCHP" width="500"/></a>
+
 #### Pin Grid View:
 <img src="images/pin_grid_view.png" alt="MCHP" width="500"/></a>
+
 Peripheral pins should be assigned as shown in this grid view.
 #### Pins:
 <img src="images/pins.png" alt="MCHP" width="500"/></a>
+
 Assigned pins should match the pin settings as shown. The application also uses custom names for pins, RC1 was renamed to "SW0" and RC7 was renamed to "SHT_AN_SEL".
 ## Operation
 
