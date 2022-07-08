@@ -1,4 +1,4 @@
-<config configName="default" projectName="newAnalogSensorNet" configVersion="1.1" device="PIC18F16Q41" deviceLibraryClass="com.microchip.mcc.melody.Library" coreVersion="5.4.3">
+<config configName="default" projectName="newAnalogSensorNet" configVersion="1.1" device="PIC18F16Q41" deviceLibraryClass="com.microchip.mcc.melody.Library" coreVersion="5.4.7">
    <usedPackages class="java.util.ArrayList">
       <package packageName="@mchp-mcc/main-manager" version="3.1.1" contentType="MELODY">
          <modules class="java.util.ArrayList"/>
@@ -178,7 +178,7 @@
       </entry>
       <entry>
          <file>mcc_generated_files\opa\src\opa1.c</file>
-         <hash>d7f357824d66f5a7be374f427ef0abb31a80f4f75bc81a92f67884cb28f9bd79</hash>
+         <hash>a5df7ec23cf05960541e1e8151b631f785c97ccd6b31ef20f6fd6abe302a2b73</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\system\clock.h</file>
@@ -194,7 +194,7 @@
       </entry>
       <entry>
          <file>mcc_generated_files\system\pins.h</file>
-         <hash>154d0e0252c22cb46f099a7179eaa69ce5d243e642b0dd5686ce76a038bd2983</hash>
+         <hash>6a50e4e61e76b2fb27d9200346f88bc87dba87292a99b1ca7b9a61251c9671f5</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\system\src\clock.c</file>

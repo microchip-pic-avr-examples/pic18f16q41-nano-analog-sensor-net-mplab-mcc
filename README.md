@@ -15,7 +15,7 @@ __Important Note:__ Each sensor requires a differing interface to function so un
      In addition a link to the device family landing page and relevant peripheral pages as well:
   - [AN3381 - Brushless DC Fan Speed Control Using Temperature Input and Tachometer Feedback](https://microchip.com/00003381/)
   - [PIC18F-Q10 Family Product Page](https://www.microchip.com/design-centers/8-bit/pic-mcus/device-selection/pic18f-q10-product-family) -->
-  - [AN3521: Analog Sensor Measurement and Acquisition] (http://microchip.com/00003521/)
+  - [AN3521 - Analog Sensor Measurement and Acquisition](http://microchip.com/00003521/)
   - [Original Analog Sensor Net](https://github.com/microchip-pic-avr-examples/pic18f16q41-analog-sensor-net/tree/2.0.0/)
   - [PIC18F-Q41 Family Product Page](https://www.microchip.com/en-us/products/microcontrollers-and-microprocessors/8-bit-mcus/pic-mcus/pic18-q41)
 
@@ -48,20 +48,29 @@ __Important Note:__ Each sensor requires a differing interface to function so un
 
 <!-- Explain how to connect hardware and set up software. Depending on complexity, step-by-step instructions and/or tables and/or images can be used -->
 ### Demo Configuration:
-[![MCHP](images/hardware_config.png)]
 
 This demo uses the curiosity nano base board, a Mikroe SHT AN, Pressure 13, and Air Quality click along with the Curiosity Nano PIC18F16Q41 microcontroller.  Populated on mikro BUS socket #1, #2 and #3 are the SHT click board, Air Quality Click, and the Pressure 13 Click respectively.
 The Operational Amplifier (OPA) module was used for the analog output of the Air Quality and SHT AN click by connecting them to non-inverting OPAMP pins (OPA1IN+). The Pressure 13 was connected directly to analog input pin RC2 for the ADCC. Additionally, pin RC7 is used as a GPIO output pin to control the chip select line of the SHT AN click, switching between temperature and humidity readings. 
 
+![MCHP](images/hardware_config.png)
+
 This code example’s signal connections are summarized in the following table:
-!!!
+
+Signal| Microcontroller Pin
+--- | ---
+SHT AN Output (Temperature and Humidity) | RC3
+SHT AN GPIO Select | RC7
+Pressure 13 Output | RC2
+Air Quality Sensor Output | RA2
+UART TX | RB7
+Switch 0 (SW0) | RC0
+
 Note: If different sockets are being used for different clicks boards, be sure to change the respective pins.
 
 __Important Note:__ The base must be modified to support running the microcontroller at 5v. The board uses the internal charge pumps that supply both 3.3V and 5V to the mikro Bus sockets. However, the curiosity baseboard will pull the “Voff” pin LOW by default and disable the Curiosity Nano’s power supply and use the base board’s 3.3V power supply instead. For this demo to function properly at 5 volts the user MUST remove the “Voff” and “3v3” jumper resistors from the base.
 
 
 ![MCHP](images/removed_voff_jumper_box.png)
-
 ![MCHP](images/removed_3v3_jumper_box.png)
 
 ### Peripheral Setup Using MCC:
@@ -88,16 +97,16 @@ __Important Note:__ The base must be modified to support running the microcontro
 #### TMR4 Configuration:
 ![MCHP](images/tmr4.png)
 
-#### UART Configuration:ADD BOXES!!!
+#### UART Configuration:
 ![MCHP](images/uart.png)
 
 ![MCHP](images/uart_plib.png)
 
 #### Builder:
 ![MCHP](images/builder.png)
-#### Pin Grid View:ADD BOXES!!!
+#### Pin Grid View:
 
-#### Pins:ADD BOXES!!!
+#### Pins:
 
 
 ## Operation

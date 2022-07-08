@@ -50,24 +50,24 @@
 #define PULL_UP_DISABLED     0
 
 // get/set RB5 aliases
-#define RB5_IN0_TRIS                 TRISBbits.TRISB5
-#define RB5_IN0_LAT                  LATBbits.LATB5
-#define RB5_IN0_PORT                 PORTBbits.RB5
-#define RB5_IN0_WPU                  WPUBbits.WPUB5
-#define RB5_IN0_OD                   ODCONBbits.ODCB5
-#define RB5_IN0_ANS                  ANSELBbits.ANSELB5
-#define RB5_IN0_SetHigh()            do { LATBbits.LATB5 = 1; } while(0)
-#define RB5_IN0_SetLow()             do { LATBbits.LATB5 = 0; } while(0)
-#define RB5_IN0_Toggle()             do { LATBbits.LATB5 = ~LATBbits.LATB5; } while(0)
-#define RB5_IN0_GetValue()           PORTBbits.RB5
-#define RB5_IN0_SetDigitalInput()    do { TRISBbits.TRISB5 = 1; } while(0)
-#define RB5_IN0_SetDigitalOutput()   do { TRISBbits.TRISB5 = 0; } while(0)
-#define RB5_IN0_SetPullup()          do { WPUBbits.WPUB5 = 1; } while(0)
-#define RB5_IN0_ResetPullup()        do { WPUBbits.WPUB5 = 0; } while(0)
-#define RB5_IN0_SetPushPull()        do { ODCONBbits.ODCB5 = 0; } while(0)
-#define RB5_IN0_SetOpenDrain()       do { ODCONBbits.ODCB5 = 1; } while(0)
-#define RB5_IN0_SetAnalogMode()      do { ANSELBbits.ANSELB5 = 1; } while(0)
-#define RB5_IN0_SetDigitalMode()     do { ANSELBbits.ANSELB5 = 0; } while(0)
+#define IO_RB5_TRIS                 TRISBbits.TRISB5
+#define IO_RB5_LAT                  LATBbits.LATB5
+#define IO_RB5_PORT                 PORTBbits.RB5
+#define IO_RB5_WPU                  WPUBbits.WPUB5
+#define IO_RB5_OD                   ODCONBbits.ODCB5
+#define IO_RB5_ANS                  ANSELBbits.ANSELB5
+#define IO_RB5_SetHigh()            do { LATBbits.LATB5 = 1; } while(0)
+#define IO_RB5_SetLow()             do { LATBbits.LATB5 = 0; } while(0)
+#define IO_RB5_Toggle()             do { LATBbits.LATB5 = ~LATBbits.LATB5; } while(0)
+#define IO_RB5_GetValue()           PORTBbits.RB5
+#define IO_RB5_SetDigitalInput()    do { TRISBbits.TRISB5 = 1; } while(0)
+#define IO_RB5_SetDigitalOutput()   do { TRISBbits.TRISB5 = 0; } while(0)
+#define IO_RB5_SetPullup()          do { WPUBbits.WPUB5 = 1; } while(0)
+#define IO_RB5_ResetPullup()        do { WPUBbits.WPUB5 = 0; } while(0)
+#define IO_RB5_SetPushPull()        do { ODCONBbits.ODCB5 = 0; } while(0)
+#define IO_RB5_SetOpenDrain()       do { ODCONBbits.ODCB5 = 1; } while(0)
+#define IO_RB5_SetAnalogMode()      do { ANSELBbits.ANSELB5 = 1; } while(0)
+#define IO_RB5_SetDigitalMode()     do { ANSELBbits.ANSELB5 = 0; } while(0)
    
 // get/set RB7 aliases
 #define IO_RB7_TRIS                 TRISBbits.TRISB7
@@ -148,6 +148,26 @@
 #define IO_RC2_SetOpenDrain()       do { ODCONCbits.ODCC2 = 1; } while(0)
 #define IO_RC2_SetAnalogMode()      do { ANSELCbits.ANSELC2 = 1; } while(0)
 #define IO_RC2_SetDigitalMode()     do { ANSELCbits.ANSELC2 = 0; } while(0)
+   
+// get/set RC3 aliases
+#define RC3_IN1_TRIS                 TRISCbits.TRISC3
+#define RC3_IN1_LAT                  LATCbits.LATC3
+#define RC3_IN1_PORT                 PORTCbits.RC3
+#define RC3_IN1_WPU                  WPUCbits.WPUC3
+#define RC3_IN1_OD                   ODCONCbits.ODCC3
+#define RC3_IN1_ANS                  ANSELCbits.ANSELC3
+#define RC3_IN1_SetHigh()            do { LATCbits.LATC3 = 1; } while(0)
+#define RC3_IN1_SetLow()             do { LATCbits.LATC3 = 0; } while(0)
+#define RC3_IN1_Toggle()             do { LATCbits.LATC3 = ~LATCbits.LATC3; } while(0)
+#define RC3_IN1_GetValue()           PORTCbits.RC3
+#define RC3_IN1_SetDigitalInput()    do { TRISCbits.TRISC3 = 1; } while(0)
+#define RC3_IN1_SetDigitalOutput()   do { TRISCbits.TRISC3 = 0; } while(0)
+#define RC3_IN1_SetPullup()          do { WPUCbits.WPUC3 = 1; } while(0)
+#define RC3_IN1_ResetPullup()        do { WPUCbits.WPUC3 = 0; } while(0)
+#define RC3_IN1_SetPushPull()        do { ODCONCbits.ODCC3 = 0; } while(0)
+#define RC3_IN1_SetOpenDrain()       do { ODCONCbits.ODCC3 = 1; } while(0)
+#define RC3_IN1_SetAnalogMode()      do { ANSELCbits.ANSELC3 = 1; } while(0)
+#define RC3_IN1_SetDigitalMode()     do { ANSELCbits.ANSELC3 = 0; } while(0)
    
 // get/set RC7 aliases
 #define SHT_AN_SEL_TRIS                 TRISCbits.TRISC7

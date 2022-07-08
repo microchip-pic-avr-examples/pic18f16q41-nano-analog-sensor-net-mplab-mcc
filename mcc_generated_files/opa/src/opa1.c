@@ -49,8 +49,8 @@ void OPA1_Initialize(void)
     //NCH No Connection; PCH OPA1IN+; 
     OPA1CON2 = 0x2;
 
-    //FMS No Connection; PSS OPA1IN0+; 
-    OPA1CON3 = 0x0;
+    //FMS No Connection; PSS OPA1IN1+; 
+    OPA1CON3 = 0x1;
 
     //OREN Software Override; HWCH User Defined Feedback; ORPOL Non Inverted; HWCL User Defined Feedback; 
     OPA1HWC = 0x0;
