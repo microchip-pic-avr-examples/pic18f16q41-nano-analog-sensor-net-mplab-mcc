@@ -84,7 +84,7 @@ Enable the High Frequency Internal Oscillator inside of "Clock Control".
 #### Configuration Bits:
 <img src="images/config_bits.png" alt="MCHP" width="500"/></a>
 
-Make sure the "Esternal Oscillator Mode Selection" is set to "Oscillator not enabled"  and that "HFINTOSC with HFFRQ = 4MHz and CDIV = 4:1" is set for "Power-up Default Value for COSC".
+Make sure the "External Oscillator Mode Selection" is set to "Oscillator not enabled"  and that "HFINTOSC with HFFRQ = 4MHz and CDIV = 4:1" is set for "Power-up Default Value for COSC".
 #### ADCC Configuration:
 <img src="images/adcc.png" alt="MCHP" width="500"/></a>
 
@@ -123,7 +123,7 @@ Assigned pins should match the pin settings as shown. The application also uses 
 ## Operation
 
 <!-- Explain how to operate the example. Depending on complexity, step-by-step instructions and/or tables and/or images can be used -->
-UART is used to display the net’s output to MPLAB Data Visualizer with a baud rate of 9600. And the pushbutton on the curiosity is used to switch between sensors. The resulting messages are shown on the terminal window below:  
+UART is used to display the net’s output to MPLAB® Data Visualizer with a baud rate of 9600. And the pushbutton on the curiosity is used to switch between sensors. The resulting messages are shown on the terminal window below:  
 <img src="images/output.png" alt="MCHP" height="300"/></a>
 
 <!-- ## Summary
