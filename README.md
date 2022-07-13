@@ -5,7 +5,7 @@
 # Analog Sensor Net for PIC18F16Q41 Curiousity Nano
 
 <!-- This is where the introduction to the example goes, including mentioning the peripherals used -->
-The Analog Sensor Net demo is a modified version of the original Analog Sensor Net for a PIC18F16q41 in a Curiosity LPC board, which relates to AN3521: Analog Sensor Measurement and Acquisition. This version uses a Curiosity Nano, Baseboard, and MikroE SHT AN, Pressure 13, and Air Quality Click. Additionally, it highlights the use of integrated Core-Independent peripherals such as the ADCC, built in OPAMP, UART, CLC, and several others on the PIC18F16Q41.
+The Analog Sensor Net demo is a modified version of the original Analog Sensor Net for a PIC18F16Q41 in a Curiosity LPC board, which relates to AN3521: Analog Sensor Measurement and Acquisition. This version uses a Curiosity Nano, Baseboard, and MikroE SHT AN, Pressure 13, and Air Quality Click. Additionally, it highlights the use of integrated Core-Independent peripherals such as the ADCC, built in OPAMP, UART, CLC, and several others on the PIC18F16Q41.
 
 __Important Note:__ Each sensor requires a differing interface to function so unique initialization routines are used between each sensor.
 
