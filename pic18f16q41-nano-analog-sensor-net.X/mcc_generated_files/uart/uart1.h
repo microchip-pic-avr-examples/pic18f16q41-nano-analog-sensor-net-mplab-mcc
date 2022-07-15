@@ -64,10 +64,11 @@
 #define UART1_TransmitDisable      UART1_TransmitDisable
 #define UART1_AutoBaudSet          (NULL)
 #define UART1_AutoBaudQuery        (NULL)
-#define UART1_BRGSet               (NULL)
-#define UART1_BRGGet               (NULL)
-#define UART1_BaudSet              (NULL)
-#define UART1_BaudGet              (NULL)
+#define UART1_BRGCountSet               (NULL)
+#define UART1_BRGCountGet               (NULL)
+#define UART1_BaudRateSet               (NULL)
+#define UART1_BaudRateGet               (NULL)
+#define UART1__AutoBaudEventEnableGet   (NULL)
 #define UART1_ErrorGet             UART1_ErrorGet
 
 #define UART1_TxCompleteCallbackRegister     (NULL)

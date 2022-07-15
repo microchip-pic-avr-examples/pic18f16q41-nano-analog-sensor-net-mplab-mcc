@@ -7,7 +7,7 @@
  * 
  * @brief This file contains the driver code for Interrupt Manager.
  * 
- * @version Interrupt Manager Driver Version 2.03
+ * @version Interrupt Manager Driver Version 2.0.4
 */
 
 /*
@@ -33,6 +33,7 @@
 
 #include "../../system/interrupt.h"
 #include "../../system/system.h"
+#include "../pins.h"
 
 void (*INT0_InterruptHandler)(void);
 void (*INT1_InterruptHandler)(void);

@@ -3,9 +3,8 @@
     <type>com.microchip.mplab.nbide.embedded.makeproject</type>
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/make-project/1">
-            <name>pic18f16q41-nano-analog-sensor-net-mplab-mcc</name>
-            <name>newAnalogSensorNet</name>
-            <creation-uuid>2badff8e-9479-40ad-ad9f-9e365c1e9008</creation-uuid>
+            <name>pic18f16q41-nano-analog-sensor-net</name>
+            <creation-uuid>87611238-d198-41c1-98b7-9031275ba3c3</creation-uuid>
             <make-project-type>0</make-project-type>
             <c-extensions>c</c-extensions>
             <cpp-extensions/>
@@ -13,14 +12,12 @@
             <asminc-extensions/>
             <sourceEncoding>ISO-8859-1</sourceEncoding>
             <make-dep-projects/>
-            <sourceRootList/>
+            <sourceRootList>
+                <sourceRootElem>.</sourceRootElem>
+            </sourceRootList>
             <confList>
                 <confElem>
-                    <name>free</name>
-                    <type>2</type>
-                </confElem>
-                <confElem>
-                    <name>pro</name>
+                    <name>default</name>
                     <type>2</type>
                 </confElem>
             </confList>

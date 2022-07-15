@@ -2,7 +2,7 @@
 
 [![MCHP](images/microchip.png)](https://www.microchip.com)
 
-# Analog Sensor Net for PIC18F16Q41 Curiousity Nano
+# Analog Sensor Net for PIC18F16Q41 Curiosity Nano
 
 <!-- This is where the introduction to the example goes, including mentioning the peripherals used -->
 The Analog Sensor Net demo is a modified version of the original Analog Sensor Net for a PIC18F16Q41 in a Curiosity LPC board, which relates to AN3521: Analog Sensor Measurement and Acquisition. This version uses a Curiosity Nano, Baseboard, and MikroE SHT AN, Pressure 13, and Air Quality Click. Additionally, it highlights the use of integrated Core-Independent peripherals such as the ADCC, built in OPAMP, UART, CLC, and several others on the PIC18F16Q41.
@@ -67,7 +67,7 @@ Switch 0 (SW0) | RC0
 
 Note: If different sockets are being used for different clicks boards, be sure to change the respective pins.
 
-__Important Note:__ The base must be modified to support running the microcontroller at 5v. The board uses the internal charge pumps that supply both 3.3V and 5V to the mikro Bus sockets. However, the curiosity baseboard will pull the “Voff” pin LOW by default and disable the Curiosity Nano’s power supply and use the base board’s 3.3V power supply instead. For this demo to function properly at 5 volts the user MUST remove the “Voff” and “3v3” jumper resistors from the base.
+__Important Note:__ The base must be modified to support running the microcontroller at 5V. The board uses the internal charge pumps that supply both 3.3V and 5V to the mikro Bus sockets. However, the curiosity baseboard will pull the “Voff” pin LOW by default and disable the Curiosity Nano’s power supply and use the base board’s 3.3V power supply instead. For this demo to function properly at 5V the user MUST remove the “Voff” and “3v3” jumper resistors from the base.
 
 
 <img src="images/removed_voff_jumper_box.png" alt="MCHP" height="300"/></a>
@@ -80,7 +80,7 @@ __Important Note:__ The base must be modified to support running the microcontro
 #### Clock Control:
 <img src="images/clock_control.png" alt="MCHP" width="500"/></a>
 
-Enable the High Frequency Internal Oscillator inside of "Clock Control".
+Enable the High Frequency Internal Oscillator inside of "Clock Control". This is optional, but ensures the HFINTOSC is always running.
 #### Configuration Bits:
 <img src="images/config_bits.png" alt="MCHP" width="500"/></a>
 
@@ -102,7 +102,7 @@ The CLC is used with TMR4 to create a hardware debouncer for the Curiosity Nano'
 #### TMR4 Configuration:
 <img src="images/tmr4.png" alt="MCHP" width="500"/></a>
 
-TMR4 is running in a Monostable mode as a timer for the CLC's JK flip-flop to create a hardware debouncer for Switch 0.
+TMR4 is running in a Monostable mode as a timer for the CLC's JK flip-flop to create a hardware debouncer for Switch 0. The Time Period should be set to 0.0015 seconds.
 #### UART Configuration:
 <img src="images/uart.png" alt="MCHP" width="500"/></a>
 

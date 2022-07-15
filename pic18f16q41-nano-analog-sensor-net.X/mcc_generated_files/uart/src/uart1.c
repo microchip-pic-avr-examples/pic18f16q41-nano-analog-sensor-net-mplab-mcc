@@ -7,7 +7,7 @@
  * 
  * @brief This is the generated driver implementation file for the UART1 driver using CCL
  *
- * @version UART1 Driver Version 3.0.0
+ * @version UART1 Driver Version 3.0.1
 */
 
 /*
@@ -56,10 +56,11 @@ const uart_drv_interface_t UART1 = {
     .TransmitDisable = &UART1_TransmitDisable,
     .AutoBaudSet = NULL,
     .AutoBaudQuery = NULL,
-    .BRGSet = NULL,
-    .BRGGet = NULL,
-    .BaudSet = NULL,
-    .BaudGet = NULL,
+    .BRGCountSet = NULL,
+    .BRGCountGet = NULL,
+    .BaudRateSet = NULL,
+    .BaudRateGet = NULL,
+    .AutoBaudEventEnableGet = NULL,
     .ErrorGet = &UART1_ErrorGet,
     .TxCompleteCallbackRegister = NULL,
     .RxCompleteCallbackRegister = NULL,
@@ -249,12 +250,14 @@ uint8_t UART1_Read(void)
     return U1RXB;
 }
 
+
 void UART1_Write(uint8_t txData)
 {
     U1TXB = txData; 
 }
 
-char getch(void)
+
+int getch(void)
 {
     while(!(UART1_IsRxReady()));
     return UART1_Read();
@@ -265,6 +268,10 @@ void putch(char txData)
     while(!(UART1_IsTxReady()));
     return UART1_Write(txData);   
 }
+
+
+
+
 
 static void UART1_DefaultFramingErrorCallback(void)
 {

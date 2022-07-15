@@ -68,7 +68,7 @@ void Timer4_Initialize(void){
     // TMR 0x0; 
     T4TMR = 0x0;
 
-    // Set default overflow callback
+    // Set Default Interrupt Handler
     Timer4_OverflowCallbackRegister(Timer4_DefaultOverflowCallback);
 
     // Clearing IF flag.
