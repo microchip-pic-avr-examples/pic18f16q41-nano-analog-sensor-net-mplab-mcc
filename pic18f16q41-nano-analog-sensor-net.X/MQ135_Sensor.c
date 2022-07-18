@@ -1,10 +1,3 @@
-/*
- * File:   MQ135_Sensor.c
- * Author: C16783
- *
- * Created on April 16, 2020, 12:03 PM
- */
-
 #include "MQ135_Sensor.h"
 
 void MQ135_ADCC_Init(void) {
