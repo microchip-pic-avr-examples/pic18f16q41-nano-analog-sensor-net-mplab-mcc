@@ -175,7 +175,8 @@ void SHT_AN_Init(void) {
     SHT_AN_ADCC_Init();
     SHT_AN_OPA_Init();
     SHT_AN_SEL_SetLow();
-}```
+}
+```
 
 #### Air Quality Interface:
 
@@ -193,7 +194,8 @@ void MQ135_OPA_Init(void) {
     // MQ135 OPA Sensor Settings
     OPA1CON2 = 0x02; // NCH = No Connection; PCH = OPA1IN+ (PSS))
     OPA1CON0 = 0x88; // OPA Enabled; Unity Gain Mode;
-}```
+}
+```
 
 #### Pressure 13 Interface:
 
@@ -211,7 +213,8 @@ void PRESSURE_13_OPA_Disable(void) {
     // Pressure_13 OPA Sensor Settings
     OPA1CON2 = 0x00; // NCH = No Connection; PCH = No Connection
     OPA1CON0 = 0x00; // OPA Disabled
-}```
+}
+```
 
 ## Operation
 

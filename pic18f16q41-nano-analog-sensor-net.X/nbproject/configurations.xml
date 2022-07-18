@@ -86,7 +86,6 @@
       <itemPath>Pressure_13.c</itemPath>
       <itemPath>SHT_AN.c</itemPath>
       <itemPath>main.c</itemPath>
-      <itemPath>newfile.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"

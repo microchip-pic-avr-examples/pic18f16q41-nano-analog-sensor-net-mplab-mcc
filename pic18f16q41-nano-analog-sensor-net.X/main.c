@@ -69,7 +69,7 @@ int main(void)
         switch (currentState) {
             case SENSOR_NET_SPLASH:
                 printf("PIC18F16Q41 Sensor Net Application Note \r\n");
-                printf("Press button S1 to cycle through sensor nodes \r\n\n");
+                printf("Press button RC0 to cycle through sensor nodes \r\n\n");
                 
                 currentState = PRESSURE_SENSOR;
                 break;
