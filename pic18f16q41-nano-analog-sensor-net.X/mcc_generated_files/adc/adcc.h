@@ -5,7 +5,7 @@
  * 
  * @defgroup  adcc ADCC
  * 
- * @brief This is the generated header file for the ADCC driver.
+ * @brief API Prototypes for the ADCC driver.
  *
  * @version ADCC Driver Version 2.1.4
 */
@@ -43,7 +43,7 @@
 /**
  @ingroup adcc
  @typedef adc_result_t
- @brief This typedef should be used for result of A/D conversion.
+ @brief Used for the result of A/D conversion.
 */
 typedef uint16_t adc_result_t;
 #ifndef uint24_t
@@ -53,7 +53,7 @@ typedef __uint24 uint24_t;
 /**
  * @ingroup adcc
  * @enum adcc_channel_t
- * @brief This enumeration contains available ADC channels.
+ * @brief Contains available ADC channels.
 */
 typedef enum
 {
@@ -72,7 +72,7 @@ typedef enum
 
 /**
  * @ingroup adcc
- * @brief This API initializes the ADC module. This routine must be called before any other ADC routine.
+ * @brief Initializes the ADC module. This routine must be called before any other ADC routine.
  * @param none
  * @return none
 */
@@ -80,7 +80,7 @@ void ADCC_Initialize(void);
 
 /**
  * @ingroup adcc
- * @brief This API starts A/D conversion on selected channel.
+ * @brief Starts A/D conversion on the selected channel.
  * @param channel - Analog channel number on which A/D conversion has to be applied.
  *                  Refer adcc_channel_t for available list of channels
  * @return none
@@ -89,7 +89,7 @@ void ADCC_StartConversion(adcc_channel_t channel);
 
 /**
  * @ingroup adcc
- * @brief This API checks if ongoing A/D conversion is complete.
+ * @brief Checks if ongoing A/D conversion is complete.
  * @pre ADCC_StartConversion() should be called before calling this function.
  * @param none
  * @retval true - if conversion is complete
@@ -100,7 +100,7 @@ bool ADCC_IsConversionDone(void);
 
 /**
  * @ingroup adcc
- * @brief This API is used to retrieve the result of latest A/D conversion.
+ * @brief Retrieves the result of latest A/D conversion.
  * @pre ADCC_StartConversion() should be called before calling this function and completion status should be checked using ADCC_IsConversionDone() routine.
  * @param none
  * @return The result of A/D conversion. Refer adc_result_t
@@ -109,7 +109,7 @@ adc_result_t ADCC_GetConversionResult(void);
 
 /**
  * @ingroup adcc
- * @brief This API is used to retrieve the result of single A/D conversion on given channel.
+ * @brief Retrieves the result of single A/D conversion on given channel.
  * @pre ADCC_DisableContinuousConversion() function should have been called before calling this function
  * @param channel - Analog channel number on which A/D conversion has to be applied.
  *                  Refer adcc_channel_t  for available channels
@@ -119,7 +119,7 @@ adc_result_t ADCC_GetSingleConversion(adcc_channel_t channel);
 
 /**
  * @ingroup adcc
- * @brief This API is used to stop ongoing A/D conversion.
+ * @brief Stops ongoing A/D conversion.
  * @pre ADCC_StartConversion() function should have been called before calling this function.
  * @param none
  * @return none
@@ -128,7 +128,7 @@ inline void ADCC_StopConversion(void);
 
 /**
  * @ingroup adcc
- * @brief This API is used enable Stop On Interrupt bit.
+ * @brief Enables Stop On Interrupt bit.
  * @pre ADCC_EnableContinuousConversion() function should have been called before calling this function.
  * @param none
  * @return none
@@ -137,7 +137,7 @@ inline void ADCC_SetStopOnInterrupt(void);
 
 /**
  * @ingroup adcc
- * @brief This API is used to discharge input sample capacitor by setting the channel to AVss.
+ * @brief Discharges input sample capacitor by setting the channel to AVss.
  * @param none
  * @return none
 */
@@ -145,7 +145,7 @@ inline void ADCC_DischargeSampleCapacitor(void);
 
 /**
  * @ingroup adcc
- * @brief This API is used to load ADC Acquisition Time Control register with specified value.
+ * @brief Loads ADC Acquisition Time Control register with specified value.
  * @param acquisitionValue - Value to be loaded in the acquisition time control register.
  * @return none
 */
@@ -153,7 +153,7 @@ void ADCC_LoadAcquisitionRegister(uint16_t acquisitionValue);
 
 /**
  * @ingroup adcc
- * @brief This API is used to load ADC Precharge Time Control register with specified value.
+ * @brief Loads ADC Precharge Time Control register with specified value.
  * @param prechargeTime - Value to be loaded in the precharge time control register.
  * @return none
 */
@@ -161,7 +161,7 @@ void ADCC_SetPrechargeTime(uint16_t prechargeTime);
 
 /**
  * @ingroup adcc
- * @brief This API is used to load repeat counter with specified value.
+ * @brief Loads repeat counter with specified value.
  * @param repeatCount - Value to be loaded to repeat counter.
  * @return none
 */
@@ -169,7 +169,7 @@ void ADCC_SetRepeatCount(uint8_t repeatCount);
 
 /**
  * @ingroup adcc
- * @brief This API retrieves the current value of ADC Repeat Count register.
+ * @brief Retrieves the current value of ADC Repeat Count register.
  * @pre ADCC_StartConversion() should be called before calling this function.
  * @param none
  * @return Current value of ADC Repeat Count register
@@ -178,7 +178,7 @@ uint8_t ADCC_GetCurrentCountofConversions(void);
 
 /**
  * @ingroup adcc
- * @brief This API clears the accumulator.
+ * @brief Clears the accumulator.
  * @param none
  * @return none
 */
@@ -186,7 +186,7 @@ inline void ADCC_ClearAccumulator(void);
 
 /**
  * @ingroup adcc
- * @brief This API retrieves 18-bit value of ADC accumulator.
+ * @brief Retrieves 18-bit value of ADC accumulator.
  * @param none
  * @return Value of ADC accumulator.
 */
@@ -194,7 +194,7 @@ uint24_t ADCC_GetAccumulatorValue(void);
 
 /**
  * @ingroup adcc
- * @brief This API is used to determine whether ADC accumulator has overflowed.
+ * @brief Determines whether ADC accumulator has overflowed.
  * @pre ADCC_StartConversion() should be called before calling this function.
  * @param none
  * @retval true - ADC accumulator has overflowed
@@ -204,7 +204,7 @@ bool ADCC_HasAccumulatorOverflowed(void);
 
 /**
  * @ingroup adcc
- * @brief This API retrieves the value of ADC Filter register.
+ * @brief Retrieves the value of ADC Filter register.
  * @param none
  * @return 16-bit value obtained from ADFLTRH and ADFLTRL registers.
 */
@@ -212,7 +212,7 @@ uint16_t ADCC_GetFilterValue(void);
 
 /**
  * @ingroup adcc
- * @brief This API retrieves the value of ADC Previous register.
+ * @brief Retrieves the value of ADC Previous register.
  * @pre ADCC_StartConversion() should be called before calling this function.
  * @param none
  * @return 16-bit value obtained from ADPREVH and ADPREVL registers.
@@ -221,7 +221,7 @@ uint16_t ADCC_GetPreviousResult(void);
 
 /**
  * @ingroup adcc
- * @brief This API used to set value of ADC Threshold Set-point.
+ * @brief Sets value of ADC Threshold Set-point.
  * @param setPoint - 16-bit value for set point.
  * @return none
 */
@@ -229,7 +229,7 @@ void ADCC_DefineSetPoint(uint16_t setPoint);
 
 /**
  * @ingroup adcc
- * @brief This API used to set value of ADC Upper Threshold register.
+ * @brief Sets value of ADC Upper Threshold register.
  * @param upperThreshold - 16-bit value for upper threshold.
  * @return none
 */
@@ -237,7 +237,7 @@ void ADCC_SetUpperThreshold(uint16_t upperThreshold);
 
 /**
  * @ingroup adcc
- * @brief This API used to set value of ADC Lower Threshold register.
+ * @brief Sets value of ADC Lower Threshold register.
  * @param lowerThreshold - 16-bit value for lower threshold.
  * @return none
 */
@@ -245,7 +245,7 @@ void ADCC_SetLowerThreshold(uint16_t lowerThreshold);
 
 /**
  * @ingroup adcc
- * @brief This API retrieves the value of ADC Set-point Error register.
+ * @brief Retrieves the value of ADC Set-point Error register.
  * @pre ADCC_StartConversion() should be called before calling this function.
  * @param none
  * @return 16-bit value obtained from ADERRH and ADERRL registers.
@@ -254,7 +254,7 @@ uint16_t ADCC_GetErrorCalculation(void);
 
 /**
  * @ingroup adcc
- * @brief This API enables double-sampling bit.
+ * @brief Enables double-sampling bit.
  * @param none
  * @return none
 */
@@ -262,7 +262,7 @@ inline void ADCC_EnableDoubleSampling(void);
 
 /**
  * @ingroup adcc
- * @brief This API enables continuous conversion.
+ * @brief Enables continuous conversion.
  * @param none
  * @return none
 */
@@ -270,7 +270,7 @@ inline void ADCC_EnableContinuousConversion(void);
 
 /**
  * @ingroup adcc
- * @brief This API disables continuous conversion.
+ * @brief Disables continuous conversion.
  * @param none
  * @return none
 */
@@ -278,7 +278,7 @@ inline void ADCC_DisableContinuousConversion(void);
 
 /**
  * @ingroup adcc
- * @brief This API is used to determine if ADC error has crossed the upper threshold.
+ * @brief Determines if ADC error has crossed the upper threshold.
  * @pre ADCC_StartConversion() should be called before calling this function.
  * @param none
  * @retval true - if ERR > UTH
@@ -288,7 +288,7 @@ bool ADCC_HasErrorCrossedUpperThreshold(void);
 
 /**
  * @ingroup adcc
- * @brief This API is used to determine if ADC error is less than the lower threshold.
+ * @brief Determines if ADC error is less than the lower threshold.
  * @pre ADCC_StartConversion() should be called before calling this function.
  * @param none
  * @retval true - if ERR < LTH
@@ -298,7 +298,7 @@ bool ADCC_HasErrorCrossedLowerThreshold(void);
 
 /**
  * @ingroup adcc
- * @brief This API is used retrieve the multi-stage status.
+ * @brief Retrieves the multi-stage status.
  * @pre ADCC_StartConversion() should be called before calling this function.
  * @param none
  * @return Contents of ADC STATUS register.

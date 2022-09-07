@@ -107,7 +107,7 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>nEdbgTool</platformTool>
         <languageToolchain>XC8</languageToolchain>
-        <languageToolchainVersion>2.36</languageToolchainVersion>
+        <languageToolchainVersion>2.40</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
@@ -340,7 +340,7 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>nEdbgTool</platformTool>
         <languageToolchain>XC8</languageToolchain>
-        <languageToolchainVersion>2.36</languageToolchainVersion>
+        <languageToolchainVersion>2.40</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
@@ -453,9 +453,20 @@
         <property key="program-the-device-with-default-config-words" value="true"/>
         <property key="remove-unused-sections" value="true"/>
       </HI-TECH-LINK>
+      <Simulator>
+        <property key="W0102_SIM_PERIPH_MISSING" value="report"/>
+        <property key="W0106_SIM_PERIPH_PARTIAL_SUPPORT" value="report"/>
+        <property key="W0107_SIM_NOT_SUPPORTED" value="report"/>
+        <property key="W0237_ADC_UNKNOWN_DATASHEET" value="report"/>
+        <property key="periphADC1.minTacq" value="4"/>
+      </Simulator>
       <Tool>
         <property key="AutoSelectMemRanges" value="auto"/>
         <property key="Freeze Peripherals" value="true"/>
+        <property key="W0102_SIM_PERIPH_MISSING" value="report"/>
+        <property key="W0106_SIM_PERIPH_PARTIAL_SUPPORT" value="report"/>
+        <property key="W0107_SIM_NOT_SUPPORTED" value="report"/>
+        <property key="W0237_ADC_UNKNOWN_DATASHEET" value="report"/>
         <property key="communication.activationmode" value="nohv"/>
         <property key="communication.interface"
                   value="${communication.interface.default}"/>
@@ -482,6 +493,7 @@
                   value="${memories.instruction.ram.ranges}"/>
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="0-ffff"/>
+        <property key="periphADC1.minTacq" value="4"/>
         <property key="poweroptions.powerenable" value="true"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.preservedataflash" value="false"/>

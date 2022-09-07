@@ -5,7 +5,7 @@
  * 
  * @ingroup  tmr4
  * 
- * @brief This is the generated driver implementation file for the TMR4 module.
+ * @brief API implementations for the TMR4 module.
  *
  * @version TMR4 Driver Version 3.0.1
  */
@@ -68,7 +68,7 @@ void Timer4_Initialize(void){
     // TMR 0x0; 
     T4TMR = 0x0;
 
-    // Set Default Interrupt Handler
+    // Set default overflow callback
     Timer4_OverflowCallbackRegister(Timer4_DefaultOverflowCallback);
 
     // Clearing IF flag.

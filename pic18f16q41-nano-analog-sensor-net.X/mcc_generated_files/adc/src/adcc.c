@@ -5,7 +5,7 @@
  * 
  * @ingroup  adcc
  * 
- * @brief This is the generated driver implementation file for the ADCC driver.
+ * @brief API Implementations for the ADCC driver.
  *
  * @version ADCC Driver Version 2.1.4
 */

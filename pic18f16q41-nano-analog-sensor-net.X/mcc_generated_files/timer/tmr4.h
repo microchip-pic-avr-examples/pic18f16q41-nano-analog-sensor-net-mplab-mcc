@@ -5,7 +5,7 @@
  *  
  * @defgroup tmr4 TMR4
  *
- * @brief This is the generated header file for the TMR4 module.
+ * @brief API Prototypes and other data types for the TMR4 module.
  *
  * @version TMR4 Driver Version 3.0.1
  */
@@ -34,11 +34,6 @@
 
 #ifndef TMR4_H
 #define TMR4_H
-
-/**
- * @brief This file contains API prototypes and other data types for TMR4 module.
- * @{
- */
 
 #include <stdint.h>
 #include <stdbool.h>
@@ -295,8 +290,7 @@ typedef enum
 
 /**
  * @ingroup tmr4
- * @brief This API initializes the TMR4 module.
- *        This routine must be called before any other TMR4 routines.
+ * @brief Initializes the TMR4 module. This routine must be called before any other TMR4 routines.
  * @param none
  * @return none
  */
@@ -305,8 +299,7 @@ typedef enum
 /**
  * @ingroup tmr4
  * @brief Configures the Hardware Limit Timer mode.
- *        Writes the T2HLTbits.MODE bits.
- *        TMR4 should be initialized with Timer4_Initialize after calling this API.
+ * @pre TMR4 should be initialized with Timer4_Initialize after calling this API.
  * @param mode - Value to write into T4HLTbits.MODE bits.
  * @return none
  */
@@ -315,8 +308,7 @@ void Timer4_ModeSet(Timer4_HLT_MODE mode);
 /**
  * @ingroup tmr4
  * @brief Configures the HLT external reset source.
- *        Writes the T4RSTbits.RSEL bits.
- *        TMR4 should be initialized with Timer4_Initialize after calling this API.
+ * @pre TMR4 should be initialized with Timer4_Initialize after calling this API.
  * @param reset - Value to write into T4RSTbits.RSEL bits.
  * @return none
  */
@@ -324,8 +316,8 @@ void Timer4_ExtResetSourceSet(Timer4_HLT_EXT_RESET_SOURCE reset);
 
 /**
  * @ingroup tmr4
- * @brief This function starts TMR4.
- *        TMR4 should be initialized with Timer4_Initialize() before calling this API.
+ * @brief Starts TMR4.
+ * @pre TMR4 should be initialized with Timer4_Initialize() before calling this API.
  * @param none
  * @return none
  */
@@ -333,8 +325,8 @@ void Timer4_Start(void);
 
 /**
  * @ingroup tmr4
- * @brief This function stops TMR4.
- *        TMR4 should be initialized with Timer4_Initialize() before calling this API.
+ * @brief Stops TMR4.
+ * @pre TMR4 should be initialized with Timer4_Initialize() before calling this API.
  * @param none
  * @return none
  */
@@ -342,8 +334,8 @@ void Timer4_Stop(void);
 
 /**
  * @ingroup tmr4
- * @brief This function reads the 8 bits from TMR4 register.
- *        TMR4 should be initialized with Timer4_Initialize() before calling this API.
+ * @brief Reads the 8 bits from TMR4 register.
+ * @pre TMR4 should be initialized with Timer4_Initialize() before calling this API.
  * @param none.
  * @return 8-bit data from TMR4 register.
  */
@@ -351,8 +343,8 @@ uint8_t Timer4_Read(void);
 
 /**
  * @ingroup tmr4
- * @brief This function writes 8-bit value to TMR4 register.
- *        TMR4 should be initialized with Timer4_Initialize() before calling this API.
+ * @brief Writes 8-bit value to TMR4 register.
+ * @pre TMR4 should be initialized with Timer4_Initialize() before calling this API.
  * @param 8-bit value to be written to TMR4 register.
  * @return none
  */
@@ -360,8 +352,8 @@ void Timer4_Write(uint8_t timerVal);
 
 /**
  * @ingroup tmr4
- * @brief This function loads 8 bit value to PR4H register.
- *        TMR4 should be initialized with Timer4_Initialize() before calling this API.
+ * @brief Loads 8-bit value to PR4H register.
+ * @pre TMR4 should be initialized with Timer4_Initialize() before calling this API.
  * @param 8-bit value to be written to PR4 register.
  * @return none
  */
@@ -377,7 +369,7 @@ void Timer4_OverflowCallbackRegister(void (* InterruptHandler)(void));
 
 /**
  * @ingroup tmr4
- * @brief This function performs tasks to be executed on timer overflow event
+ * @brief Performs tasks to be executed on timer overflow event.
  * @param none
  * @return none
  */
