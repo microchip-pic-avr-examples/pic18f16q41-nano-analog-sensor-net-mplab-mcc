@@ -4,3 +4,7 @@
 !/**/nbproject/*.xml
 /**/dist/*
 /**/.generated_files/*
+!/**/[Ff]ree/production/*.hex
+#!/**/[Ff]ree/production/*.elf
+!/**/[Pp]ro/production/*.hex
+#!/**/[Pp]ro/production/*.elf
