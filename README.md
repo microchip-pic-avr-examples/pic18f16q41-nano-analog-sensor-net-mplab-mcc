@@ -4,13 +4,12 @@
 
 # Analog Sensor Net for PIC18F16Q41 Curiosity Nano
 
-The Analog Sensor Net demo is a modified version of the original [Analog Sensor Net](https://github.com/microchip-pic-avr-examples/pic18f16q41-analog-sensor-net/tree/2.0.0/) for a PIC18F16Q41 on the Curiosity LPC board, which relates to AN3521: Analog Sensor Measurement and Acquisition. This version uses a Curiosity Nano, Baseboard, and MikroE SHT AN, Pressure 13, and Air Quality Click. Additionally, it highlights the use of integrated Core-Independent peripherals such as the ADCC, built in OPAMP, UART, CLC, and several others on the PIC18F16Q41.
+This Analog Sensor Net demo is a modified version of the original [Analog Sensor Net](https://github.com/microchip-pic-avr-examples/pic18f16q41-analog-sensor-net/tree/2.0.0/) for a PIC18F16Q41 on the Curiosity LPC board, which relates to [AN3521](https://ww1.microchip.com/downloads/aemDocuments/documents/MCU08/ApplicationNotes/ApplicationNotes/Analog-Sensor-Measurement-and-Acquisition-DS00003521A.pdf): Analog Sensor Measurement and Acquisition. This version uses a Curiosity Nano, Curiosity Nano Baseboard, and MikroE SHT AN, Pressure 13, and Air Quality Click. Additionally, it highlights the use of integrated Core-Independent Peripherals such as the ADCC, built in OPAMP, UART, CLC, and several others on the PIC18F16Q41.
 
 __Important Note:__ Each sensor requires a differing interface to function so unique initialization routines are used between each sensor.
 
 ## Related Documentation
 
-     In addition a link to the device family landing page and relevant peripheral pages as well:-->
   - [AN3521 - Analog Sensor Measurement and Acquisition](http://microchip.com/00003521/)
   - [Original Analog Sensor Net](https://github.com/microchip-pic-avr-examples/pic18f16q41-analog-sensor-net/tree/2.0.0/)
   - [Switch Debouncing with PIC18F16Q40](https://github.com/microchip-pic-avr-examples/pic18f16q40-clc-switch-debouncing)
@@ -24,8 +23,6 @@ __Important Note:__ Each sensor requires a differing interface to function so un
   - MPLAB Code Configurator (MCC) Device Libraries PIC10 / PIC12 / PIC16 / PIC18 MCUs [(microchip.com/mplab/mplab-code-configurator)](https://www.microchip.com/mplab/mplab-code-configurator)
   - Microchip PIC18F-Q Series Device Support (1.14.237) or newer [(packs.download.microchip.com/)](https://packs.download.microchip.com/)
 
-<!-- - MPLAB X IDE 6.0.0 or newer [(MPLAB X IDE 6.0)](https://www.microchip.com/en-us/development-tools-tools-and-software/mplab-x-ide?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_MPAE_Examples&utm_content=pic18f16q41-nano-analog-sensor-net-mplab-mcc-github)
-- MPLAB XC8 2.36.0 or newer compiler [(MPLAB XC8 2.36)](https://www.microchip.com/en-us/development-tools-tools-and-software/mplab-xc-compilers?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_MPAE_Examples&utm_content=pic18f16q41-nano-analog-sensor-net-mplab-mcc-github) -->
 
 ## Hardware Used
 
@@ -43,6 +40,10 @@ __Important Note:__ Each sensor requires a differing interface to function so un
 This demo uses the Curiosity Nano Base Board with the PIC18F16Q41 Curiosity Nano. Mikro BUS sockets #1, #2 and #3 on the Base Board are populated by the SHT click board, Air Quality click board, and the Pressure 13 click board respectively.
 The Operational Amplifier (OPA) module was used for the analog output of the Air Quality and SHT AN click by connecting them to non-inverting OPAMP pins (OPA1IN+). The Pressure 13 was connected directly to analog input pin RC2 for the ADCC. Additionally, pin RC7 is used as a GPIO output pin to control the chip select line of the SHT AN click, switching between temperature and humidity readings. 
 
+Below is a diagram of the Core Independent Peripherals used and an image of the hardware used for the demo:
+
+<img src="images/Analog_Sensor_Net_Diagram .png" alt="Analog Sensor Net Diagram" width="500"/></a>
+
 <img src="images/hardware_config.png" alt="hardware configuration" width="500"/></a>
 
 This code example’s signal connections are summarized in the following table:
@@ -58,7 +59,7 @@ Switch 0 (SW0) | RC0
 
 Note: If different sockets are being used for different clicks boards, be sure to change the respective pins.
 
-__Important Note:__ The base must be modified to support running the microcontroller at 5V. The board uses the internal charge pumps that supply both 3.3V and 5V to the mikro Bus sockets. However, the curiosity baseboard will pull the “Voff” pin LOW by default and disable the Curiosity Nano’s power supply and use the base board’s 3.3V power supply instead. For this demo to function properly at 5V the user MUST remove the “Voff” and “3v3” jumper resistors from the base.
+__Important Note:__ The Curiosity Nano Base must be modified to support running the microcontroller at 5V. The board uses the internal charge pumps that supply both 3.3V and 5V to the mikroBus sockets. However, the curiosity baseboard will pull the “Voff” pin LOW by default and disable the Curiosity Nano’s power supply and use the base board’s 3.3V power supply instead. For this demo to function properly at 5V, the user MUST remove the “Voff” and “3v3” jumper resistors from the base.
 
 
 <img src="images/removed_voff_jumper_box.png" alt="Removed Voff Jumper with Box" height="300"/></a>
@@ -99,7 +100,7 @@ TMR4 is running in a Monostable mode as a timer for the CLC's JK flip-flop to cr
 
 <img src="images/uart_plib.png" alt="UART Peripheral Library" width="500"/></a>
 
-The UART driver is used to display the output from the sensor net in MPLAB Data Visualizer or any terminal emulator using a Baud Rate of 9600. To enable print statements, the user must open the UART peripheral library (UART1PLIB) from the Builder window and enable "Redirect STDIO to UART".
+The UART driver is used to display the output from the sensor net in MPLAB Data Visualizer or any terminal emulator using a Baud Rate of 9600. To enable printf statements, the user must open the UART peripheral library (UART1PLIB) from the Builder window and enable "Redirect STDIO to UART".
 #### Builder:
 <img src="images/builder.png" alt="Melody Builder" width="500"/></a>
 
@@ -210,9 +211,9 @@ void PRESSURE_13_OPA_Disable(void) {
 
 ## Operation
 
-UART is used to display the net’s output to MPLAB Data Visualizer with a baud rate of 9600. And the pushbutton on the curiosity is used to switch between sensors. The resulting messages are shown on the terminal window below:  
+UART is used to display the net’s output to MPLAB Data Visualizer with a baud rate of 9600. The pushbutton on the Curiosity Nano board is used to switch between sensors. The resulting messages are shown on the terminal window below:  
 <img src="images/output.png" alt="Output" height="300"/></a>
 
 ## Summary
 
-This example has shown how to use an integrated OPAMP with an ADCC to interface with multiple analog sensors off of a single microcontroller.
+This example has shown how to use an integrated OPAMP with an ADCC to interface with multiple analog sensors on a single microcontroller.
