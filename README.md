@@ -13,21 +13,21 @@ __Important Note:__ Each sensor requires a differing interface to function so un
   - [AN3521 - Analog Sensor Measurement and Acquisition](http://microchip.com/00003521/)
   - [Original Analog Sensor Net](https://github.com/microchip-pic-avr-examples/pic18f16q41-analog-sensor-net/tree/2.0.0/)
   - [Switch Debouncing with PIC18F16Q40](https://github.com/microchip-pic-avr-examples/pic18f16q40-clc-switch-debouncing)
-  - [PIC18F-Q41 Family Product Page](https://www.microchip.com/en-us/products/microcontrollers-and-microprocessors/8-bit-mcus/pic-mcus/pic18-q41)
+  - [PIC18F16Q41 Family Product Page](https://www.microchip.com/en-us/products/microcontrollers-and-microprocessors/8-bit-mcus/pic-mcus/pic18-q41?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_pic18q41&utm_content=pic18f16q41-nano-analog-sensor-net-mplab-mcc-github)
 
 ## Software Used
 
-  - MPLAB® X IDE 6.0.0 or newer [(microchip.com/mplab/mplab-x-ide)](http://www.microchip.com/mplab/mplab-x-ide)
-  - MPLAB XC8 2.40 or a newer compiler [(microchip.com/mplab/compilers)](http://www.microchip.com/mplab/compilers)
-  - MPLAB Code Configurator (MCC) 5.1.17 or newer [(microchip.com/mplab/mplab-code-configurator)](https://www.microchip.com/mplab/mplab-code-configurator)
-  - MPLAB Code Configurator (MCC) Device Libraries PIC10 / PIC12 / PIC16 / PIC18 MCUs [(microchip.com/mplab/mplab-code-configurator)](https://www.microchip.com/mplab/mplab-code-configurator)
+  - MPLAB® X IDE 6.0.0 or newer [(microchip.com/mplab/mplab-x-ide)](https://www.microchip.com/en-us/tools-resources/develop/mplab-x-ide?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_pic18q41&utm_content=pic18f16q41-nano-analog-sensor-net-mplab-mcc-github)
+  - MPLAB XC8 2.40 or a newer compiler [(microchip.com/mplab/compilers)](https://www.microchip.com/en-us/tools-resources/develop/mplab-xc-compilers?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_pic18q41&utm_content=pic18f16q41-nano-analog-sensor-net-mplab-mcc-github)
+  - MPLAB Code Configurator (MCC) 5.1.17 or newer [(microchip.com/mplab/mplab-code-configurator)](https://www.microchip.com/en-us/tools-resources/configure/mplab-code-configurator?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_pic18q41&utm_content=pic18f16q41-nano-analog-sensor-net-mplab-mcc-github)
+  - MPLAB Code Configurator (MCC) Device Libraries PIC10 / PIC12 / PIC16 / PIC18 MCUs [(microchip.com/mplab/mplab-code-configurator)](https://www.microchip.com/en-us/tools-resources/configure/mplab-code-configurator?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_pic18q41&utm_content=pic18f16q41-nano-analog-sensor-net-mplab-mcc-github)
   - Microchip PIC18F-Q Series Device Support (1.14.237) or newer [(packs.download.microchip.com/)](https://packs.download.microchip.com/)
 
 
 ## Hardware Used
 
-  - PIC18F16Q41 Curiosity Nano [(EV26Q64A)](https://www.microchip.com/en-us/development-tool/EV26Q64A)
-  - Curiosity Nano Base for Click boards™ [(AC164162)](https://www.microchip.com/Developmenttools/ProductDetails/AC164162)
+  - PIC18F16Q41 Curiosity Nano [(EV26Q64A)](https://www.microchip.com/en-us/development-tool/EV26Q64A?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_pic18q41&utm_content=pic18f16q41-nano-analog-sensor-net-mplab-mcc-github)
+  - Curiosity Nano Base for Click boards™ [(AC164162)](https://www.microchip.com/en-us/development-tool/AC164162?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_pic18q41&utm_content=pic18f16q41-nano-analog-sensor-net-mplab-mcc-github)
   - Air Quality Click board™ [(MIKROE-1630)](https://www.mikroe.com/air-quality-click)
   - SHT AN Click board™ [(MIKROE-3984)](https://www.mikroe.com/sht-an-click)
   - Pressure 13 Click board™ [(MIKROE-4294)](https://www.mikroe.com/pressure-13-click)
@@ -42,7 +42,7 @@ The Operational Amplifier (OPA) module was used for the analog output of the Air
 
 Below is a diagram of the Core Independent Peripherals used and an image of the hardware used for the demo:
 
-<img src="images/Analog_Sensor_Net_Diagram .png" alt="Analog Sensor Net Diagram" width="500"/></a>
+<img src="images/Analog_Sensor_Net_Diagram.png" alt="Analog Sensor Net Diagram" width="500"/></a>
 
 <img src="images/hardware_config.png" alt="hardware configuration" width="500"/></a>
 
